@@ -1,0 +1,9 @@
+streamlit
+python-dotenv
+langchain
+langchain_google_genai
+google-api-python-client
+langchain-chroma
+langchain-community
+langchain
+pinecone-client
