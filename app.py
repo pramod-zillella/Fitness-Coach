@@ -142,18 +142,46 @@ for message in st.session_state.chat_history:
                 video_url = f"https://www.youtube.com/watch?v={rec['video_id']}"
                 st.markdown(f"[Watch Video]({video_url})")
 
-# User input
 user_input = st.chat_input("Type your fitness question here...")
+
 if user_input:
+    # Display the user input with the avatar immediately
+    with st.chat_message("user", avatar="🧑"):
+        st.write(user_input)
+
+    # Show spinner while generating the response
+    with st.chat_message("assistant", avatar="💬"):
+        with st.spinner("Crushing this query for you..."):
+            # Process the query and generate the response
+            response, recommendations, response_time = get_response_and_recommendations(user_input)
+
+    # Append the user and assistant messages to the chat history
     st.session_state.chat_history.append({"role": "user", "content": user_input})
-    response, recommendations, response_time = get_response_and_recommendations(user_input)
     st.session_state.chat_history.append({
         "role": "assistant", 
         "content": response,
         "recommendations": recommendations,
         "response_time": response_time
     })
+
     st.rerun()
+
+# # Display chat history
+# for message in st.session_state.chat_history:
+#     with st.chat_message(message["role"], avatar="🧑" if message["role"] == "user" else "💬"):
+#         st.write(message["content"])
+#     if message["role"] == "assistant" and "recommendations" in message:
+#         st.markdown(f"<p style='color: grey; font-size: 0.8em;'>Response time: {message['response_time']:.2f} seconds</p>", unsafe_allow_html=True)
+#         st.subheader("Video Recommendations:")
+#         cols = st.columns(3)
+#         for idx, rec in enumerate(message["recommendations"]):
+#             with cols[idx]:
+#                 st.image(rec['thumbnail_url'], use_column_width=True)
+#                 st.write(f"**{rec['title']}**")
+#                 video_url = f"https://www.youtube.com/watch?v={rec['video_id']}"
+#                 st.markdown(f"[Watch Video]({video_url})")
+
+
 
 
 
