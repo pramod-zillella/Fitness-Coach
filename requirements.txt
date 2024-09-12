@@ -7,3 +7,4 @@ langchain-chroma
 langchain-community
 langchain
 pinecone-client
+sentence_transformers
