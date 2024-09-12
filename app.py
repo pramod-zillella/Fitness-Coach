@@ -11,7 +11,7 @@ from langchain.schema import HumanMessage
 st.set_page_config(
     page_title="Fitness AI Chatbot",
     page_icon="💪",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="collapsed",
 )
 
 # Load environment variables
