@@ -31,6 +31,14 @@ The AthleanX AI Coach is an advanced fitness assistant that leverages cutting-ed
 
 This architecture allows the AthleanX AI Coach to provide personalized, accurate, and relevant fitness advice by combining the vast knowledge base of AthleanX videos with state-of-the-art AI language models.
 
+## Visual Workflow
+
+The following diagram illustrates our RAG pipeline, inspired by NVIDIA's local RAG workflow:
+
+<p align="center">
+  <img src="https://developer-blogs.nvidia.com/wp-content/uploads/2023/12/rag-pipeline-ingest-query-flow-b-2048x960.png" width="800" alt="flowchart of a local RAG workflow" />
+</p>
+
 
 ### Data Processing Pipeline
 1. Video Scraping → Metadata Extraction → Text Chunking → Embedding Generation → Vector Database Storage
