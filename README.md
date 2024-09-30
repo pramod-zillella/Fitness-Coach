@@ -6,6 +6,14 @@ AthleanX AI Coach is an intelligent chatbot powered by the fitness expertise of 
 ## Live Demo
 Try out the AthleanX AI Coach here: [\[Streamlit App Link\]](https://fitness-coach.streamlit.app/)
 
+## Visual Workflow
+
+The following diagram illustrates our RAG pipeline, inspired by NVIDIA's local RAG workflow:
+
+<p align="center">
+  <img src="https://developer-blogs.nvidia.com/wp-content/uploads/2023/12/rag-pipeline-ingest-query-flow-b-2048x960.png" width="800" alt="flowchart of a local RAG workflow" />
+</p>
+
 ## Project Overview
 
 The AthleanX AI Coach is an advanced fitness assistant that leverages cutting-edge AI technologies and a rich dataset of fitness content. Here's a high-level overview of the project's architecture and methodology:
@@ -31,13 +39,6 @@ The AthleanX AI Coach is an advanced fitness assistant that leverages cutting-ed
 
 This architecture allows the AthleanX AI Coach to provide personalized, accurate, and relevant fitness advice by combining the vast knowledge base of AthleanX videos with state-of-the-art AI language models.
 
-## Visual Workflow
-
-The following diagram illustrates our RAG pipeline, inspired by NVIDIA's local RAG workflow:
-
-<p align="center">
-  <img src="https://developer-blogs.nvidia.com/wp-content/uploads/2023/12/rag-pipeline-ingest-query-flow-b-2048x960.png" width="800" alt="flowchart of a local RAG workflow" />
-</p>
 
 
 ### Data Processing Pipeline
